@@ -10,6 +10,15 @@
     color:#000000 !important;
     text-decoration:none;
 }
+#aboutme{
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+.flag{
+    width: 2.5rem;
+    height: 2.5rem;
+}
 
 </style>
 <head>
@@ -18,17 +27,47 @@
     <title>Renan's Website</title>
 </head>
 <body>
-    <div id="profileDiv" class="d-flex justify-content-center align-items-center mt-5">
+    <div id="profileDiv" class="d-flex justify-content-center flex-column flex-md-row flex-lg-row align-items-center mt-5">
         <h1 class="h-150 p-2">&#128075;</h1>
         <h2 class="pr-4">Hey!</h2>
         <img src="images\3.jpeg" alt="Profile_img" class="profile-img img-fluid img-thumbnail rounded-circle">
     </div>
 
-    <div id="buttons" class="d-flex justify-content-center align-items-center mt-5">
-        <button type="button" class="btn btn-light p-4 m-1"><h5><a href="#">Currículo</a></h5></button>
+    <div id="buttons" class="d-flex justify-content-center align-items-center mt-4">
+        <button type="button" class="btn btn-light p-4 m-1"><h5><a href="#curriculum">Currículo</a></h5></button>
         <button type="button" class="btn btn-light p-4 m-1"><h5><a href="#">Contato</a></h5></button>
-        <button type="button" class="btn btn-light p-4 m-1"><h5><a href="#">Sobre Mim</a></h5></button>
+        <!-- <button type="button" class="btn btn-light p-4 m-1"><h5><a href="#">Sobre Mim</a></h5></button> -->
     </div>
-    
+
+    <div id="aboutme" class="d-block bg-light mt-2 p-2">
+        <h5 class="text-center">Sobre mim</h5>
+        <p class="text-left">Tenho 26 anos, Engenheiro de Telecomunicações. Conto com experiência internacional pois estudei Engenharia, realizei pesquisas e cursei MBA em Gerência de Tecnologia de Informações nos Estados Unidos.</p>
+        <h5 class="text-center">O que procuro?</h5>
+        <p class="text-left">Estou em busca de uma carreira em uma organização que utiliza tecnologia para tomar decisões éticas com o intuito de aprimorar a vida de seus <a class="font-italic">stakeholders</a> e tornar o mundo em um lugar melhor.</p>
+        <h5 class="text-center">Porque me contratar?</h5>
+        <p class="text-left">Como Engenheiro, trago comigo a versatilidade em aprender novas tecnologias pois possuo o entedimento fundamental em redes de computadores, sistemas, circuitos eletricos, programação e banco de dados.
+            Como estudante de MBA em Gerência de TI, aprendi sobre áreas fundamentais de negócio como: Finanças corpotativas, Marketing, Estatística aplicada, Operações e Logísticas, Gerência de Projetos, entre outros.
+        </p>
+    </div>
+
+    <div id="curriculum" class="d-block bg-light mt-5 p-2">
+        <h3 class="text-center">Currículo<button onClick="startDownload()" class="btn btn-outline-success text-right ml-5 font-weight-normal" data-toggle="tooltip" data-placement="bottom" title="CV em Português" >
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-download" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                <path fill-rule="evenodd" d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+              </svg><img class="ml-2 flag " src="images\BR-Brazil-Flag-icon.png"></img>
+        </button></h3>
+        
+        <h5>Experiências</h5>
+
+    </div>
+<script type="text/javascript">  
+        function startDownload()  
+        {  
+             var url='images\3_rengoes_portuguese.pdf';    
+             window.open(url, 'Download');  
+        }  
+
+</script>
 </body>
 </html>
