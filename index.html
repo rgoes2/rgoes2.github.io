@@ -1,6 +1,7 @@
 <html lang="en">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/bab4e13954.js" crossorigin="anonymous"></script>
 <style>
     .profile-img{
        height: 150px;
@@ -9,11 +10,6 @@
     a {
     color:#000000 !important;
     text-decoration:none;
-}
-#aboutme{
-    width: 70%;
-    margin-left: 15%;
-    margin-right: 15%;
 }
 .flag{
     width: 2.5em;
@@ -26,17 +22,17 @@
 
 @media screen and (max-width: 750px) {
     .flag{
-    width: 1.5em;
-    height: 1.5em;
+    width: 1em;
+    height: 1em;
 }
 .flag2{
-    width: 1.75em;
-    height: 1.5em;
+    width: 1.25em;
+    height: 1em;
 }
 
 }
 
-#curriculum{
+.w70 {
     width: 70%;
     margin-left: 15%;
     margin-right: 15%;
@@ -49,7 +45,6 @@
     <title>Renan's Website</title>
 </head>
 <body class="bg-white ">
-    <div id="construction"><h3 class="">Em Construção!</h3></div>
     <div id="profileDiv" class="d-flex justify-content-center flex-column flex-md-row flex-lg-row align-items-center mt-5">
         <h1 class="h-150 p-2">&#128075;</h1>
         <h2 class="pr-4">Hey!</h2>
@@ -62,7 +57,7 @@
         <!-- <button type="button" class="btn btn-light p-4 m-1"><h5><a href="#">Sobre Mim</a></h5></button> -->
     </div>
 
-    <div id="aboutme" class="d-block bg-light mt-2 p-2 rounded">
+    <div id="aboutme" class="d-block bg-light mt-2 p-2 rounded w70">
         <h5 class="text-center">Sobre mim</h5>
         <p class="text-left">Tenho 26 anos, Engenheiro de Telecomunicações. Conto com experiência internacional pois estudei Engenharia, realizei pesquisas e cursei MBA em Gerência de Tecnologia de Informações nos Estados Unidos.</p>
         <h5 class="text-center">O que procuro?</h5>
@@ -73,27 +68,29 @@
         </p>
     </div>
 
-    <div id="curriculum" class="bg-light mt-5 p-2 text-center rounded">
+    <div id="curriculum" class="bg-light mt-5 p-2 text-center rounded w70">
         <h3 class="d-inline-block">Currículo </h3>
         <button class="btn btn-outline-success ml-1 font-weight-normal d-inline-block" data-toggle="tooltip" data-placement="bottom" title="CV em Português" >
-            <a href="https://github.com/rgoes2/rgoes2.github.io/raw/main/images/3_rengoes_portuguese.pdf" download><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-download" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <a href="{{ https://github.com/rgoes2/rgoes2.github.io/main }}/pdf/3_rengoes_portuguese.pdf" download><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-download" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
                 <path fill-rule="evenodd" d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
               </svg><img class="ml-2 flag " src="images\BR-Brazil-Flag-icon.png"></img></a>
         </button>
         <button class="btn btn-outline-success ml-1 font-weight-normal d-inline-block" data-toggle="tooltip" data-placement="bottom" title="CV em Inglês" >
-            <a href="https://github.com/rgoes2/rgoes2.github.io/raw/main/images/3_rengoes_english.pdf" download><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-download" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <a href="{{ https://github.com/rgoes2/rgoes2.github.io/main }}/pdf/3_rengoes_english.pdf" download><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-download" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
                 <path fill-rule="evenodd" d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
               </svg><img class="ml-2 flag2 " src="images\USA_Flag.png"></img></a>
             </button>
 
-      <!--  </div>
+    </div>
 
-  <div id="contact" class="bg-light mt-5 p2 text-center rounded">
+    <div id="contact" class="bg-light mt-5 p2 text-center rounded w70 mb-5">
         <h3>Contato</h3>
-       I need to include e-mail here and probably linkedin  
-    </div> --> 
+        <a href="mailto: rgoes2@hotmail.com"><h5 class="h-150 p-2">&#9993; rgoes2@hotmail.com</a></h5>
+        <a href="https://www.linkedin.com/in/rgoes2/"><h5><i class="fab fa-linkedin h-150 p-2 "></i>Linkedin</h5></a>
+
+    </div>
 <script type="text/javascript">  
 
 
