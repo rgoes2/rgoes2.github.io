@@ -20,6 +20,15 @@
     height: 2.5em;
 }
 
+.cert-img {
+    height:100px;
+}
+@media screen and (max-width: 500px) {
+    .cert-img {
+        height:50px;
+    }
+}
+
 @media screen and (max-width: 750px) {
     .flag{
     width: 1em;
@@ -38,57 +47,90 @@
     margin-right: 15%;
 }
 
+.w50 {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+span.wave {
+  animation-name: wave-animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate(  0.0deg); }
+   10% { transform: rotate(-10.0deg); }
+   20% { transform: rotate( 12.0deg); }
+   30% { transform: rotate(-10.0deg); }
+   40% { transform: rotate(  9.0deg); }
+   50% { transform: rotate(  0.0deg); }
+  100% { transform: rotate(  0.0deg); }
+}
+
+
+
 </style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Renan's Website</title>
 </head>
-<body class="bg-white ">
+<body class="bg-light">
     <div id="profileDiv" class="d-flex justify-content-center flex-column flex-md-row flex-lg-row align-items-center mt-5">
-        <h1 class="h-150 p-2">&#128075;</h1>
-        <h2 class="pr-4">Hey!</h2>
+        <h1><span class="wave h-150 p-2">&#128075;</span></h1>
+        <h2 class="pr-4 text-dark">Hey!</h2>
         <img src="images\3.jpeg" alt="Profile_img" class="profile-img img-fluid img-thumbnail rounded-circle">
+    </div>
+    <div class="bg-light d-block rounded border border-secondary border-flex-column flex-md-row flex-lg-row  mt-2 w70 pt-2 pb-2">
+        <div id="certifications" class="d-flex justify-content-center align-items-center ">
+            <a href="https://www.scrum.org/certificates/616537"><img src="images\pspoi.png" alt="PSPOI" class="cert-img img-fluid"></a>
+            <h5 class="text-dark flex-md-row flex-lg-row">Professional Scrum Product Owner</h5>
+        </div>
     </div>
 
     <div id="buttons" class="d-flex justify-content-center align-items-center mt-4">
-        <button type="button" class="btn btn-light p-4 m-1"><h5><a href="#curriculum">Currículo</a></h5></button>
-        <button type="button" class="btn btn-light p-4 m-1"><h5><a href="#contact">Contato</a></h5></button>
+        <button type="button" class="bg-light border-dark btn btn-light p-4 m-1"><h5><a href="#curriculum" class="text-dark">Currículo</a></h5></button>
+        <button type="button" class="bg-light border border-dark btn btn-light p-4 m-1"><h5><a href="#contact" class="text-dark">Contato</a></h5></button>
         <!-- <button type="button" class="btn btn-light p-4 m-1"><h5><a href="#">Sobre Mim</a></h5></button> -->
     </div>
 
-    <div id="aboutme" class="d-block bg-light mt-2 p-2 rounded w70">
-        <h5 class="text-center">Sobre mim</h5>
+    <div id="aboutme" class="d-block border border-secondary bg-light mt-2 p-2 rounded w70">
+        <h5 class="text-center text-light bg-secondary border border-light rounded p-2">Sobre mim</h5>
         <p class="text-left">Tenho 26 anos, Engenheiro de Telecomunicações. Conto com experiência internacional pois estudei Engenharia, realizei pesquisas e cursei MBA em Gerência de Tecnologia de Informações nos Estados Unidos.</p>
-        <h5 class="text-center">O que procuro?</h5>
+        <h5 class="text-center text-light bg-secondary border border-light rounded p-2">O que procuro?</h5>
         <p class="text-left">Estou em busca de uma carreira em uma organização que utiliza tecnologia para tomar decisões éticas com o intuito de aprimorar a vida de seus <a class="font-italic">stakeholders</a> e tornar o mundo em um lugar melhor.</p>
-        <h5 class="text-center">Porque me contratar?</h5>
+        <h5 class="text-center text-light bg-secondary border border-light rounded p-2">Porque me contratar?</h5>
         <p class="text-left">Como Engenheiro, trago comigo a versatilidade em aprender novas tecnologias pois possuo o entedimento fundamental em redes de computadores, sistemas, circuitos eletricos, programação e banco de dados.
             Como estudante de MBA em Gerência de TI, aprendi sobre áreas fundamentais de negócio como: Finanças corpotativas, Marketing, Estatística aplicada, Operações e Logísticas, Gerência de Projetos, entre outros.
         </p>
     </div>
 
-    <div id="curriculum" class="bg-light mt-5 p-2 text-center rounded w70">
-        <h3 class="d-inline-block">Currículo </h3>
-        <button class="btn btn-outline-success ml-1 font-weight-normal d-inline-block" data-toggle="tooltip" data-placement="bottom" title="CV em Português" >
-            <a href="/pdf/3_rengoes_portuguese.pdf" download><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-download" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
-                <path fill-rule="evenodd" d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
-              </svg><img class="ml-2 flag " src="images\BR-Brazil-Flag-icon.png"></img></a>
-        </button>
-        <button class="btn btn-outline-success ml-1 font-weight-normal d-inline-block" data-toggle="tooltip" data-placement="bottom" title="CV em Inglês" >
-            <a href="/pdf/3_rengoes_english.pdf" download><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-download" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
-                <path fill-rule="evenodd" d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
-              </svg><img class="ml-2 flag2 " src="images\USA_Flag.png"></img></a>
+    <div id="curriculum" class="border border-secondary bg-light mt-5 p-2 text-center rounded w70">
+        <div class="text-center text-light bg-secondary border border-light rounded p-2">
+            <h3 class="d-inline-block ">Currículo </h3>
+            <button class="btn btn-outline-success ml-1 font-weight-normal d-inline-block" data-toggle="tooltip" data-placement="bottom" title="CV em Português" >
+                <a href="{{ https://github.com/rgoes2/rgoes2.github.io/main }}/pdf/3_rengoes_portuguese.pdf" download><svg width="1em" height="1em" viewBox="0 0 16 16" class=" text-light bi bi-download" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                    <path fill-rule="evenodd" d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+                </svg><img class="ml-2 flag " src="images\BR-Brazil-Flag-icon.png"></img></a>
             </button>
+            <button class="btn btn-outline-danger ml-1 font-weight-normal d-inline-block" data-toggle="tooltip" data-placement="bottom" title="CV em Inglês" >
+                <a href="{{ https://github.com/rgoes2/rgoes2.github.io/main }}/pdf/3_rengoes_english.pdf" download><svg width="1em" height="1em" viewBox="0 0 16 16" class="text-light bi bi-download" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                    <path fill-rule="evenodd" d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+                </svg><img class="ml-2 flag2 " src="images\USA_Flag.png"></img></a>
+                </button>
+        </div>
 
     </div>
 
-    <div id="contact" class="bg-light mt-5 p2 text-center rounded w70 mb-5">
-        <h3>Contato</h3>
-        <a href="mailto: rgoes2@hotmail.com"><h5 class="h-150 p-2">&#9993; rgoes2@hotmail.com</a></h5>
-        <a href="https://www.linkedin.com/in/rgoes2/"><h5><i class="fab fa-linkedin h-150 p-2 "></i>Linkedin</h5></a>
+    <div id="contact" class="bg-secondary mt-5 text-center pb-5">
+        <h3 class="text-light pt-5">Contato</h3>
+        <a  class="text-light" href="mailto: rgoes2@hotmail.com"><h5 class="h-150 p-2 ">&#9993; rgoes2@hotmail.com</a></h5>
+        <a class="text-light" href="https://www.linkedin.com/in/rgoes2/"><h5 class="mb-0" ><i class="fab fa-linkedin h-150 p-2 "></i>Linkedin</h5></a>
 
     </div>
 <script type="text/javascript">  
